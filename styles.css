@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #e6f0ffc0;
 }
 
 /* Header styling */
@@ -30,7 +31,7 @@ header {
 
 /* Wachttijden sectie */
 #wachttijden {
-    background-color: #f9f9f9;
+    background-color: #c7c7c7;
     padding: 20px 15px; /* Extra padding links en rechts toegevoegd */
 }
 
@@ -48,19 +49,19 @@ header {
 }
 
 #attracties-list li {
-    background-color: #ebebeb;
+    background-color: #ffffff;
     margin: 10px 15px; /* Zorgt voor ruimte aan de zijkanten van de items */
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 16px;
     text-align: left; /* Houd tekst links uitgelijnd */
-    filter: drop-shadow(10px 10px 4px #0000002f);
+    filter: drop-shadow(10px 10px 4px #0000000e);
 }
 
 /* Informatie sectie */
 #informatie {
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
 #informatie h2 {
