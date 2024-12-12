@@ -1,0 +1,106 @@
+/* Algemene styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    height: 40px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Wachttijden sectie */
+#wachttijden {
+    background-color: #f9f9f9;
+    padding: 20px 15px; /* Extra padding links en rechts toegevoegd */
+}
+
+#wachttijden h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-left: 15px; /* Extra padding toegevoegd om ruimte aan de linkerkant te creëren */
+    text-align: left; /* Tekst uitgelijnd naar links voor consistentie */
+}
+
+#attracties-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#attracties-list li {
+    background-color: #ebebeb;
+    margin: 10px 15px; /* Zorgt voor ruimte aan de zijkanten van de items */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: left; /* Houd tekst links uitgelijnd */
+    filter: drop-shadow(10px 10px 4px #0000002f);
+}
+
+/* Informatie sectie */
+#informatie {
+    padding: 20px;
+    background-color: #fff;
+}
+
+#informatie h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: auto;
+    position: relative;
+    overflow: hidden; /* Zorgt ervoor dat de clip-path werkt */
+}
+
+.footer-curve {
+    content: '';
+    position: absolute;
+    bottom: -20px; /* Zorgt ervoor dat de curve onder de footer komt */
+    left: 0;
+    width: 100%;
+    height: 100px; /* Hoogte van de curve */
+    background-color: #007bff;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Driehoekige vorm voor de curve */
+    transform: skewY(-10deg); /* Schuine vervorming om de curve te accentueren */
+}
+
+.attractie-naam {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0; /* Zorg dat er geen extra marges zijn */
+}
+
+.wachttijd {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 5px 0 0 0; /* Kleine ruimte boven de wachttijd */
+}

@@ -1,0 +1,5 @@
+[
+    { "name": "Fenix", "wait_time": 30 },
+    { "name": "Troy", "wait_time": 45 },
+    { "name": "Dwervelwind", "wait_time": 15 }
+]
