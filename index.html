@@ -4,45 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toverland Layout</title>
-    <!-- Link naar het externe CSS-bestand -->
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Header sectie -->
     <header>
-        <!-- Menu-icoon (aan de linkerkant) -->
         <img src="MenuIcon.webp" alt="Menu" class="icon">
-
-        <!-- Logo (in het midden) -->
         <img src="LogoToverland.png" alt="Toverland Logo" class="logo">
-
-        <!-- Zoek-icoon (aan de rechterkant) -->
-        <img src="SearchLogo.png" alt="Search" class="icon">
+        <img src="SearchLogo.png" id="search-icon" alt="Search" class="icon">
     </header>
 
     <main>
         <h1 style="padding-left: 15px; text-align: left;">Wachttijden Attracties</h1>
+        <div id="search-container" class="hidden">
+            <input type="text" id="search-input" placeholder="Zoek een attractie..." />
+            <button id="search-button">Zoek</button>
+        </div>
         <ul id="attracties-list">
-            <!-- Hier komen de attracties dynamisch -->
+            <!-- Dynamische inhoud wordt hier toegevoegd -->
         </ul>
     </main>
 
-    <!-- Footer sectie -->
     <footer>
-        <!-- Tekst aan de linkerkant -->
         <div class="footer-text">
             © 2024 Toverland. Alle rechten voorbehouden.
         </div>
-
-        <!-- Tekst aan de rechterkant -->
         <div class="footer-text">
             Contact: info@toverland.nl
         </div>
     </footer>
 
     <script src="script.js"></script>
-    
 </body>
-</html> 
+</html>
