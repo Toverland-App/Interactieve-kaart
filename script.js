@@ -1,7 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.querySelector("#menu-icon");
+    const hamburgerMenu = document.querySelector("#hamburger-menu");
     const apiURL = "http://localhost:5000/api/";
     let attracties = [];
 
+    // Klik op het menu-icoon om het menu te openen of te sluiten
+    menuIcon.addEventListener("click", function () {
+        hamburgerMenu.classList.toggle("hidden");
+    });
+
+    // Data ophalen van de API
     async function fetchWachttijden() {
         try {
             const response = await fetch(apiURL + 'Attraction', {
@@ -43,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Zoekfunctionaliteit
     const searchIcon = document.getElementById("search-icon");
     const searchContainer = document.getElementById("search-container");
     const searchInput = document.getElementById("search-input");
