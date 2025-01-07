@@ -5,7 +5,21 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #e6f0ffc0;
+    background: linear-gradient(120deg, rgb(213, 242, 255), #ffffff, #71c6ff);
+    background-size: 300% 300%;
+    animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 header {
@@ -78,6 +92,7 @@ main {
     margin-bottom: 10px;
     border-radius: 10px;
     background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .tekst-container {
@@ -117,7 +132,6 @@ footer {
     width: 100%;
 }
 
-/* Hamburger-menu stijl */
 nav#hamburger-menu {
     position: absolute;
     top: 50px;
@@ -150,7 +164,6 @@ nav#hamburger-menu li:hover {
     border-radius: 5px;
 }
 
-/* Animatie voor het menu */
 @keyframes slideDown {
     from {
         opacity: 0;
@@ -162,7 +175,6 @@ nav#hamburger-menu li:hover {
     }
 }
 
-/* Verborgen menu */
 .hidden {
     display: none;
 }
