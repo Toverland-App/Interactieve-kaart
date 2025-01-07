@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.querySelector("#menu-icon");
     const hamburgerMenu = document.querySelector("#hamburger-menu");
-    const apiURL = "http://localhost:5000/api/";
+    const apiURL = "https://i558324.luna.fhict.nl/api/";
     let attracties = [];
 
     // Klik op het menu-icoon om het menu te openen of te sluiten
@@ -34,6 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         filteredAttracties.forEach(attractie => {
             const item = document.createElement("li");
+            item.classList.add("attractie-item");
+
+            const tekstContainer = document.createElement("div");
+            tekstContainer.classList.add("tekst-container");
 
             const attractieNaam = document.createElement("h2");
             attractieNaam.textContent = attractie.name;
@@ -44,8 +48,17 @@ document.addEventListener("DOMContentLoaded", function () {
             wachttijd.textContent = `Wachttijd: ${wachttijdMinuten} minuten`;
             wachttijd.classList.add("wachttijd");
 
-            item.appendChild(attractieNaam);
-            item.appendChild(wachttijd);
+            tekstContainer.appendChild(attractieNaam);
+            tekstContainer.appendChild(wachttijd);
+
+            // Voeg illustratie toe
+            const illustratie = document.createElement("img");
+            illustratie.src = `${attractie.id}.png`; // Pas de URL aan naar jouw afbeelding locatie
+            illustratie.alt = `${attractie.name} illustratie`;
+            illustratie.classList.add("illustratie");
+
+            item.appendChild(tekstContainer);
+            item.appendChild(illustratie);
 
             lijst.appendChild(item);
         });
