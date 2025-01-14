@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const menuIcon = document.querySelector("#menu-icon");
-    const hamburgerMenu = document.querySelector("#hamburger-menu");
+
     const apiURL = "https://i558324.luna.fhict.nl/api/";
     let attracties = [];
 
@@ -12,10 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const popupWachttijd = document.getElementById("popup-wachttijd");
     const popupMinimaleLengte = document.getElementById("popup-minimale-lengte");
 
-    // Klik op het menu-icoon om het menu te openen of te sluiten
-    menuIcon.addEventListener("click", function () {
-        hamburgerMenu.classList.toggle("hidden");
-    });
 
     // Data ophalen van de API
     async function fetchWachttijden() {
@@ -122,4 +117,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     fetchWachttijden(); // Haal de wachttijden op bij het laden van de pagina
+
+    // Function to open the curtain menu
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+// Function to close the curtain menu
+function closeNav() {
+    document.getElementById("myNav").style.width = "0";
+}
 });
