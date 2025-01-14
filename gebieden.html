@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(120deg, rgb(165, 201, 255), #ffffff, #71c6ff);
+            background-size: 300% 300%;
+            animation: gradientMove 6s ease infinite;
+            margin: 0;
+        }
+
+        h1 {
+            color: #00438b;
+            text-align: left;
+            padding: 15px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .area-button {
+            padding: 10px 20px;
+            background-color: #00438b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+            display: inline-block;
+        }
+
+        .area-button:hover {
+            background-color: #0056b3;
+        }
+
+        #attracties-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .attractie-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .attractie-naam {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00438b;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay-content a {
+            color: white;
+            display: block;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 15px 0;
+        }
+
+        .overlay-content {
+          position: relative;
+          top: 25%;
+          width: 100%;
+          text-align: center;
+          margin-top: 90px;
+        }
+
+        .overlay a {
+          padding: 8px;
+          text-decoration: none;
+          font-size: 36px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+        }
+        
+
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 36px;
+            cursor: pointer;
+        }
+
+        .overlay a:hover, .overlay a:focus {
+          color: #f1f1f1;
+        }
+        
+
+        .overlay .closebtn {
+          position: absolute;
+          top: 20px;
+          right: 45px;
+          font-size: 60px;
+        }
+        
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @media screen and (max-height: 450px) {
+          .overlay a {font-size: 20px}
+          .overlay .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+          }
+        }
+    </style>
+    <title>Gebieden</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        <img src="LogoToverland.png" alt="Toverland Logo" class="logo">
+        <img src="SearchLogo.png" id="search-icon" alt="Search" class="icon">
+    </header>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="index.html">Wachttijden</a>
+            <a href="gebieden.html">Gebieden</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+    </div>
+
+    <main>
+        <h1>Gebieden</h1>
+        <div id="areas-container">
+            <!-- Dynamische gebiedsknoppen worden hier toegevoegd -->
+        </div>
+        <ul id="attracties-list">
+            <!-- Dynamische attracties worden hier toegevoegd -->
+        </ul>
+    </main>
+
+    <script src="gebieden.js"></script>
+</body>
+</html>
