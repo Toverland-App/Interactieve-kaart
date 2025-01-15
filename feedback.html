@@ -25,7 +25,6 @@
             justify-content: center;
             align-items: center;
             gap: 20px;
-            margin-top: 50px;
         }
 
         .feedback-button {
@@ -43,6 +42,38 @@
             width: 100px;
             height: 100px;
         }
+
+        #feedback-form {
+            margin-top: 30px;
+            display: none; /* Verberg standaard */
+            text-align: center;
+        }
+
+        #feedback-comment {
+            width: 80%;
+            height: 100px;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        #submit-feedback {
+            padding: 10px 20px;
+            background-color: #00438b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #submit-feedback:hover {
+            background-color: #0056b3;
+        }
+
+        
     </style>
 </head>
 <body>
@@ -64,15 +95,20 @@
     <main>
         <h1>Geef je feedback</h1>
         <div class="feedback-container">
-            <button class="feedback-button" onclick="sendFeedback(2)">
-                <img src="positive.png" alt="Positief">
+            <button class="feedback-button" onclick="showFeedbackForm(2)">
+                <img src="Green_Smiley.png" alt="Positief">
             </button>
-            <button class="feedback-button" onclick="sendFeedback(1)">
-                <img src="neutral.png" alt="Neutraal">
+            <button class="feedback-button" onclick="showFeedbackForm(1)">
+                <img src="Yellow_Smiley.png" alt="Neutraal">
             </button>
-            <button class="feedback-button" onclick="sendFeedback(0)">
-                <img src="negative.png" alt="Negatief">
+            <button class="feedback-button" onclick="showFeedbackForm(0)">
+                <img src="Red_Smiley.png" alt="Negatief">
             </button>
+        </div>
+
+        <div id="feedback-form">
+            <textarea id="feedback-comment" placeholder="Voeg hier je opmerkingen toe..."></textarea>
+            <button id="submit-feedback" onclick="submitFeedback()">Verstuur Feedback</button>
         </div>
     </main>
 
